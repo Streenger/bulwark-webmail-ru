@@ -229,7 +229,7 @@ export function MarketplaceTab() {
       {!loading && !error && extensions.length > 0 && (
         <>
           <div className="text-xs text-muted-foreground">
-            {total} extension{total !== 1 ? 's' : ''} found
+            {`${total} extension${total !== 1 ? 's' : ''} found`}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {extensions.map((ext) => (
@@ -364,7 +364,7 @@ function ExtensionCard({
             </span>
             {extension.permissions && extension.permissions.length > 0 && (
               <span title={extension.permissions.join(', ')}>
-                {extension.permissions.length} permission{extension.permissions.length !== 1 ? 's' : ''}
+                {`${extension.permissions.length} permission${extension.permissions.length !== 1 ? 's' : ''}`}
               </span>
             )}
           </div>

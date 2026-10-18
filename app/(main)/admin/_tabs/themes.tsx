@@ -461,7 +461,7 @@ export function ThemesTab() {
               onChange={(e) => setColorModePolicy({ defaultColorMode: e.target.value === 'system' ? null : e.target.value as ColorMode })}
               className="h-8 px-2 w-full sm:w-auto shrink-0 rounded-md border border-input bg-background text-sm text-foreground"
             >
-              <option value="system">System</option>
+              <option value="system">Follow system</option>
               <option value="light">Light</option>
               <option value="dark">Dark</option>
             </select>

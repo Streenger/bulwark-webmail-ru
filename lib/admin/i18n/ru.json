@@ -419,7 +419,7 @@
  "Admin-deployed": "Установлена администратором",
  "Default Color Mode": "Цветовой режим по умолчанию",
  "Light, dark or system for users who have not picked one": "Светлый, тёмный или системный для пользователей, не выбравших свой",
- "System": "Системный",
+ "System": "Система",
  "Light": "Светлый",
  "Dark": "Тёмный",
  "Lock Color Mode": "Закрепить цветовой режим",
@@ -594,5 +594,6 @@
  "marketplace.install_plugin": "Установка плагина из каталога",
  "marketplace.install_theme": "Установка темы из каталога",
  "marketplace.update_plugin": "Обновление плагина из каталога",
- "marketplace.update_theme": "Обновление темы из каталога"
+ "marketplace.update_theme": "Обновление темы из каталога",
+ "Follow system": "Как в системе"
 }

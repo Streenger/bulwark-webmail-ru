@@ -42,5 +42,8 @@ export const ADMIN_PATTERNS_RU: ReadonlyArray<readonly [RegExp, string]> = [
   [/^Admin auto-login failed \(HTTP (\d+)\)$/, 'Не удалось выполнить автоматический вход администратора (HTTP $1)'],
   [/^Space-separated scopes that replace the defaults \((.*)\)\. Leave blank to use them\. (.*)$/, 'Области через пробел, заменяющие значения по умолчанию ($1). Оставьте пустым, чтобы использовать их. $2'],
   [/^Additional space-separated scopes appended to the defaults \((.*)\)\. Ignored when OAuth Scopes is set\.$/, 'Дополнительные области через пробел, добавляемые к значениям по умолчанию ($1). Игнорируются, если заданы области OAuth.'],
+  [/^Build ([0-9a-f]+)$/, 'Сборка $1'],
+  [/^(\d+) extensions? found$/, 'Найдено расширений: $1'],
+  [/^(\d+) permissions?$/, 'Разрешений: $1'],
   [/^(\d+) total entries$/, 'Всего записей: $1'],
 ];

@@ -35,6 +35,7 @@ import { useUpdateStore, selectHasUpdate } from '@/stores/update-store';
 import { apiFetch, getPathPrefix, withBasePath } from '@/lib/browser-navigation';
 import { useAdminUnsavedStore } from '@/stores/admin-unsaved-store';
 import { UnsavedChangesGuard } from './_unsaved-changes-guard';
+import { AdminTranslator } from '@/components/admin/admin-translator';
 
 // Single-page tab navigation: clicks update a Zustand store. The URL stays
 // at /admin so React doesn't fire a route transition on every tab switch -
@@ -77,7 +78,7 @@ const NAV_GROUPS: ReadonlyArray<{
   },
 ];
 
-export default function AdminLayout({ children }: { children: React.ReactNode }) {
+function AdminLayoutInner({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
   const storeActiveTab = useAdminTabStore((s) => s.activeTab);
@@ -514,5 +515,14 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         </a>
       </nav>
     </div>
+  );
+}
+
+export default function AdminLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <AdminTranslator />
+      <AdminLayoutInner>{children}</AdminLayoutInner>
+    </>
   );
 }
